@@ -1,19 +1,7 @@
-// You can add any dynamic behavior or interactions here
-// For simplicity, let's keep it empty for now
 // Script for changing text dynamically every second
 const dynamicTextElement = document.getElementById('dynamic-text');
 const dynamicTexts = ["I'm a life coach", "Life Coach", "Dance Teacher", "Nutritionist"];
 let currentIndex = 0;
-
-/*
-function changeDynamicText() {
-    dynamicTextElement.textContent = `${dynamicTexts[currentIndex]}`;
-    currentIndex = (currentIndex + 1) % dynamicTexts.length;
-}
-*/
-
-// Change text every second
-//setInterval(changeDynamicText, 1000);
 
 function changeDynamicText() {
     const options = {
@@ -24,7 +12,6 @@ function changeDynamicText() {
         backDelay: 1000,
         startDelay: 500,
         onComplete: function () {
-            //typed.destroy(); // Destroy the Typed instance to avoid conflicts
             setTimeout(startTyped, 2000); // Wait for 1 second before starting the next typing animation
         }
     };
@@ -33,9 +20,6 @@ function changeDynamicText() {
 }
 
 function startTyped() {
-    // Change to the next text after typing is complete
-    //currentIndex = (currentIndex + 1) % dynamicTexts.length;
-    //console.log(currentIndex);
     // Start the typing animation
     changeDynamicText();
 }
@@ -43,14 +27,6 @@ function startTyped() {
 // Initial start
 startTyped();
 
-/*
-function scrollToSection(sectionId) {
-    var section = document.getElementById(sectionId);
-    if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-*/
 function scrollToSection(event, sectionId) {
     event.preventDefault(); // Prevent the default anchor behavior
     var section = document.getElementById(sectionId);
