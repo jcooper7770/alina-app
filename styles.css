@@ -1,0 +1,359 @@
+:root {
+  --primary-color: #ff5e62;
+  /* Vibrant Red */
+  --secondary-color: #4c80f1;
+  /* Bold Blue */
+  --accent-color: #ffa41b;
+  /* Bright Yellow */
+  --background-color: #dee2e6;
+  /* Light Gray Background */
+}
+
+/* Buttons and Call-to-Action Styling */
+.btn-primary {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  border: none;
+}
+
+.btn-accent {
+  background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+  border: none;
+}
+
+/* Cards and Sections Styling */
+.card {
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+  color: white;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Example for a Gradient Heading */
+h2.gradient-text {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+header {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+#nav-container {
+  display: flex;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  font-weight: bold;
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+section {
+  padding: 2rem;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Add any additional custom styles here */
+
+/* Add any additional custom styles here */
+
+/* Set maximum height for the carousel */
+#bannerCarousel {
+  max-height: 400px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Center the images vertically and horizontally in the carousel */
+.carousel-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 90%;
+  /* Set the width to 90% */
+  margin: 0 auto;
+  /* Center the carousel */
+}
+
+.carousel-item {
+  text-align: center;
+  /* Center the image within the item */
+}
+
+.carousel-item img {
+  max-width: 100%;
+  /* Make sure the image doesn't exceed the container width */
+  max-height: 100%;
+  /* Make sure the image doesn't exceed the container height */
+  width: auto;
+  /* Allow the image to resize proportionally */
+  height: auto;
+  /* Allow the image to resize proportionally */
+}
+
+/* Adjust margin for the carousel */
+.carousel {
+  margin-top: 20px;
+}
+
+/* Additional styles for the circular image */
+.circular-image {
+  border-radius: 50%;
+  overflow: hidden;
+  /*
+  width: 500px;
+  height: 500px;
+  */
+  width: 100%;
+  height: 100%;
+}
+
+.circular-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#name {
+  font-size: xx-large;
+  font-weight: bolder;
+  margin-bottom: auto;
+}
+
+.about-text {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: auto;
+}
+
+#dynamic-text {
+  color: var(--primary-color);
+  /*font-weight: bold;*/
+  /*font-family: 'Comic Sans MS';*/
+  font-family: Kaushan Script;
+  font-size: large;
+  font-style: italic;
+}
+
+/* Additional styles for the hero section */
+.hero-section {
+  height: 100vh;
+  /* Set the height of the hero section to the viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.down-arrow {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  z-index: 1;
+}
+
+/* Additional styles for the testimonials section */
+.testimonials-section {
+  background-color: #f8f9fa;
+  /* Set background color as needed */
+  padding: 80px 0;
+  /* Adjust padding as needed */
+}
+
+.testimonial {
+  text-align: center;
+  padding: 20px;
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+.testimonial img {
+  width: 100px;
+  /* Adjust image size as needed */
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Custom styles for carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  color: #000;
+  /* Set the color of the buttons */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+  /* Set the background color of the icons */
+}
+
+/* Override Bootstrap's default white color for carousel indicators */
+.carousel-indicators li {
+  background-color: #000;
+}
+
+/* Additional styles for the workout videos section */
+.workout-section {
+  padding: 80px 0;
+  /* Adjust padding as needed */
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.video-category {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Playlist sections */
+#playlist-section {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 600px;
+  flex-direction: column;
+}
+
+.playlist-container {
+  overflow-y: auto;
+  width: 300px;
+  /* Adjust the width as needed */
+  border-right: 1px solid #ddd;
+}
+
+.playlist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  background-color: #ddd;
+  color: black;
+}
+
+.playlist-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.playlist-item:hover {
+  background-color: #f5f5f5;
+}
+
+.playlist-thumbnail {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.playlist-details {
+  flex: 1;
+}
+
+.playlist-title {
+  font-weight: bold;
+}
+
+.playlist-video {
+  display: none;
+}
+
+.highlighted-item-container {
+  flex: 1;
+  display: flex;
+  padding-left: 0px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.highlighted-item {
+  padding: 20px;
+  font-size: 20px;
+  background-color: #f5f5f5;
+  color: black;
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  #playlist-section {
+    flex-direction: row;
+  }
+
+  .highlighted-item-container {
+    margin-bottom: 0px;
+  }
+}
