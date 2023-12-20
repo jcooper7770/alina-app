@@ -60,6 +60,8 @@ function highlightItem(item) {
 // Put videos into video section
 const playlist_list = document.getElementById('playlist-list');
 videos.forEach(section => {
+    var vidNum = 0;
+    var videoPrefix = `video-${section.section.toLowerCase()}`;
     const section_div = document.createElement('div');
     const header = document.createElement('h2');
     header.textContent = section.section;
@@ -68,20 +70,72 @@ videos.forEach(section => {
         const item = document.createElement('div');
         item.className = "playlist-item";
         item.onclick = "highlightItem(this)";
+        var thumbnail = `<img src="${video.thumbnailUrl}" alt="Thumbnail" class="playlist-thumbnail"></img>`;
+        if (video.videoUrl.endsWith(".mp4")) {
+            var highlightedContent = `<video id="${videoPrefix}-${vidNum}" width="100%" height="100%" controls>
+                <source src="${video.videoUrl}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>`
+            thumbnail = `<video class="playlist-thumbnail" src=${video.videoUrl}></video>`
+            vidNum += 1;
+        } else {
+            var highlightedContent = `<img height="100%" src="${video.videoUrl}" alt="${video.title}">`
+        }
         const content = `
      <div class="playlist-item" onclick="highlightItem(this)">
-        <img src="${video.thumbnailUrl}" alt="Thumbnail" class="playlist-thumbnail">
+        ${thumbnail}
         <div class="playlist-details">
             <div class="playlist-title">${video.title}</div>
             <div class="playlist-description">${video.description}</div>
-            <div class="playlist-video"><img src="${video.videoUrl}" alt="${video.title}"></div>
+            <div class="playlist-video">${highlightedContent}</div>
         </div>
     </div>`
         item.innerHTML = content;
         section_div.appendChild(item);
+
+        // Create the thumbnail
+        if (video.videoUrl.endsWith(".mp4")){
+            createThumbnail(`video-${vidNum - 1}`);
+        }
     });
     playlist_list.appendChild(section_div);
+    //createThumbnails(section.section.toLowerCase(), vidNum);
 });
+
+function createThumbnails(section, numVideos) {
+    for (let i = 0; i < numVideos; i++) {
+        createThumbnail(`video-${section}-${i}`);
+    }
+}
+
+function createThumbnail(videoId) {
+    video = document.getElementById(videoId);
+    if (video === null) {
+        console.log(`Couldn't find video with id: ${videoId}`);
+        return
+    }
+    console.log(video);
+    var thumbnail = video.parentElement.parentElement.parentElement.children[0]
+    console.log(thumbnail);
+    video.addEventListener('loadedmetadata', () => {
+      // Set the currentTime to get a specific frame as a thumbnail
+      console.log(video.duration);
+      video.currentTime = 1; // Adjust the time as needed (in seconds)
+
+      // Capture the current frame as an image
+      const canvas = document.createElement('canvas');
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+      // Set the image data to the thumbnail
+      thumbnail.src = canvas.toDataURL('image/png');
+
+      // Show the thumbnail container
+      //thumbnailContainer.style.display = 'block';
+    });
+}
 
 // Fill in testimonials
 testimonials_list = document.getElementById('testimonial-list');

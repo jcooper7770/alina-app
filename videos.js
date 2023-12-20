@@ -4,30 +4,58 @@ var videos = [
         collection: [
             {
                 thumbnailUrl: 'image.jpg',
-                videoUrl: 'video.mov',
+                videoUrl: 'images/workout1.mp4',
                 title: 'Video 1',
                 description: 'Description for Video 1'
             },
             {
-                thumbnailUrl: 'image.jpg',
-                videoUrl: 'video.mov',
-                title: 'Video 2',
-                description: 'Description for Video 2'
+                thumbnailUrl: 'images/flex.jpg',
+                videoUrl: 'images/flex.jpg',
+                title: 'Flexing',
+                description: 'Flexing'
             },
             {
-                thumbnailUrl: 'image.jpg',
-                videoUrl: 'video.mov',
-                title: 'Video 3',
-                description: 'Description for Video 3'
+                thumbnailUrl: 'images/bikini.jpg',
+                videoUrl: 'images/bikini.jpg',
+                title: 'Bikini pic',
+                description: 'Hanging out in nature'
+            },
+            {
+                thumbnailUrl: 'images/nature.webp',
+                videoUrl: 'images/nature.webp',
+                title: 'Nature',
+                description: 'Hanging out in nature'
             }
         ]
     },
- {
+    {
+        section: 'Food',
+        collection: [
+            {
+                thumbnailUrl: 'images/food1.jpg',
+                videoUrl: 'images/food1.jpg',
+                title: 'Food',
+                description: 'A declicious meal'
+            }
+        ]
+    },
+    {
+        section: 'Dance',
+        collection: [
+            {
+                thumbnailUrl: 'images/dance1.webp',
+                videoUrl: 'images/dance1.webp',
+                title: 'Dance pose',
+                description: 'Posing during a dance'
+            }
+        ]
+    },
+    {
         section: 'Cardio',
         collection: [
             {
-                thumbnailUrl: 'image.jpg',
-                videoUrl: 'video.mov',
+                thumbnailUrl: 'images/cardio1.jpg',
+                videoUrl: 'images/cardio1.jpg',
                 title: 'Cardio 1',
                 description: 'Description for Cardio 1'
             }
