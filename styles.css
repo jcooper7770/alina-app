@@ -176,9 +176,11 @@ footer {
 }
 
 #dynamic-text {
-  color: var(--primary-color);
+  /*color: var(--primary-color);
   font-family: Kaushan Script;
-  font-size: large;
+  font-size: large;*/
+  color: black;
+  font-size: medium;
   font-style: italic;
 }
 

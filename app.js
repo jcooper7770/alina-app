@@ -1,6 +1,7 @@
 // Script for changing text dynamically every second
 const dynamicTextElement = document.getElementById('dynamic-text');
-const dynamicTexts = ["I'm a life coach", "Life Coach", "Dance Teacher", "Nutritionist"];
+//const dynamicTexts = ["I'm a life coach", "Fitness Director", "Zouk Instructor", "Life Coach", "Speech Language Pathologist", "Psychologist"];
+const dynamicTexts = ["I'm a life coach", "Movement and Mindset Coach", "Speech Language Pathologist/Psychologist"];
 let currentIndex = 0;
 
 function changeDynamicText() {
@@ -9,7 +10,8 @@ function changeDynamicText() {
         strings: dynamicTexts.map(text => `${text}`),
         typeSpeed: 50, // Adjust typing speed (characters per minute)
         showCursor: false, // Hide the blinking cursor
-        backDelay: 1000,
+        //backDelay: 1000, // Length of pause after finished typing
+        backDelay: 2000,
         startDelay: 500,
         onComplete: function () {
             setTimeout(startTyped, 2000); // Wait for 1 second before starting the next typing animation
@@ -68,7 +70,7 @@ videos.forEach(section => {
     section_div.appendChild(header);
     section.collection.forEach(video => {
         const item = document.createElement('div');
-        item.className = "playlist-item";
+        //item.className = "playlist-item";
         item.onclick = "highlightItem(this)";
         var thumbnail = `<img src="${video.thumbnailUrl}" alt="Thumbnail" class="playlist-thumbnail"></img>`;
         if (video.videoUrl.endsWith(".mp4")) {
@@ -101,6 +103,9 @@ videos.forEach(section => {
     playlist_list.appendChild(section_div);
     //createThumbnails(section.section.toLowerCase(), vidNum);
 });
+// highlight the first item
+const firstVideo = document.getElementsByClassName("playlist-item")[0];
+highlightItem(firstVideo);
 
 function createThumbnails(section, numVideos) {
     for (let i = 0; i < numVideos; i++) {
