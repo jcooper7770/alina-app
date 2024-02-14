@@ -1,5 +1,17 @@
 var videos = [
     {
+        section: 'Teaching',
+        collection: [
+            {
+                thumbnailUrl: 'image.jpg',
+                videoUrl: 'images/zouk_class.mp4',
+                title: 'Example Zouk class',
+                description: 'Teaching a beginner zouk class'
+            }
+        ]
+    },
+
+    {
         section: 'Workout',
         collection: [
             {
@@ -58,29 +70,6 @@ var videos = [
                 videoUrl: 'images/cardio1.jpg',
                 title: 'Cardio 1',
                 description: 'Description for Cardio 1'
-            }
-        ]
-    },
-    {
-        section: 'Teaching',
-        collection: [
-            {
-                thumbnailUrl: 'image.jpg',
-                videoUrl: 'video.mov',
-                title: 'Teaching 1',
-                description: 'Description for Teaching 1'
-            },
-            {
-                thumbnailUrl: 'image.jpg',
-                videoUrl: 'video.mov',
-                title: 'Video 1',
-                description: 'Description for Video 1'
-            },
-            {
-                thumbnailUrl: 'image.jpg',
-                videoUrl: 'video.mov',
-                title: 'Video 1',
-                description: 'Description for Video 1'
             }
         ]
     }

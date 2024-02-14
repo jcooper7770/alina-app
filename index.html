@@ -18,13 +18,15 @@
   <header id="navbar" class="bg-dark text-white fixed-top">
     <div class="" id="nav-container">
       <h3 class="mx-0">Alina Pink</h3>
-      <nav class="ml-auto">
+      <!--<nav class="ml-auto">-->
+      <nav class="">
         <ul class="nav">
           <li class="nav-item"><a class="nav-link" onclick="scrollToSection(event,'about')" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" onclick="scrollToSection(event,'services')" href="#">Services</a>
           </li>
           <li class="nav-item"><a class="nav-link" onclick="scrollToSection(event,'playlist')" href="#">Videos</a></li>
-          <li class="nav-item"><a class="nav-link btn btn-danger" onclick="scrollToSection(event,'contact')" href="#">Contact/Book</a>
+          <!--<li class="nav-item"><a class="nav-link btn btn-danger" onclick="scrollToSection(event,'contact')" href="#">Contact/Book</a>-->
+          <li class="nav-item"><a class="nav-link btn btn-danger" href="https://calendly.com/elinapink" target="_blank">Book</a>
           </li>
         </ul>
       </nav>
@@ -51,7 +53,8 @@
             <!--<p class="about-text">The <span id="dynamic-text">Movement and Mindset Coach</span></p>-->
             <p class="about-text"><span id="dynamic-text">Movement and Mindset Coach</span></p>
             <br>
-            <a onclick="scrollToSection(event,'contact')" class="btn btn-danger btn-lg">Book Now<a></a>
+            <!--<a onclick="scrollToSection(event,'contact')" class="btn btn-danger btn-lg">Book Now<a></a>-->
+            <a href="https://calendly.com/elinapink" target="_blank" class="btn btn-danger btn-lg">Book Now<a></a>
               <!--<p id="dynamic-text">I'm a life coach</p>-->
           </div>
         </div>
@@ -154,6 +157,9 @@
     </section>
 
   </div>
+
+
+  <!--
   <section id="contact" class="py-5">
     <div class="container card">
       <div class="row">
@@ -184,6 +190,7 @@
       </div>
     </div>
   </section>
+  -->
   <br><br>
 
   <footer class="bg-dark text-white text-center py-3">
@@ -206,7 +213,7 @@
     // Activate the carousel with a faster interval
     $(document).ready(function () {
       $('.carousel').carousel({
-        interval: 500, // Set the interval to 3 seconds (adjust as needed)
+        interval: 3000, // Set the interval to 3 seconds (adjust as needed)
         pause: false
       });
     });
