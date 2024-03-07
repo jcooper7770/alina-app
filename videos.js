@@ -4,7 +4,7 @@ var videos = [
         collection: [
             {
                 thumbnailUrl: 'image.jpg',
-                videoUrl: 'images/zouk_class.mp4',
+                videoUrl: 'images/zouk_class2.mp4',
                 title: 'Example Zouk class',
                 description: 'Teaching a beginner zouk class'
             }
