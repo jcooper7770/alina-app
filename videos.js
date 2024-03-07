@@ -7,10 +7,27 @@ var videos = [
                 videoUrl: 'images/zouk_class2.mp4',
                 title: 'Example Zouk class',
                 description: 'Teaching a beginner zouk class'
+            },
+            {
+                thumbnailUrl: 'image.jpg',
+                videoUrl: 'images/zouk_class3.mp4',
+                title: 'Example Zouk class',
+                description: 'Teaching a beginner zouk class'
+            },
+            {
+                thumbnailUrl: 'image.jpg',
+                videoUrl: 'images/zouk_class4.mp4',
+                title: 'Example Zouk class',
+                description: 'Teaching a beginner zouk class'
+            },
+            {
+                thumbnailUrl: 'image.jpg',
+                videoUrl: 'images/zouk_class5.mp4',
+                title: 'Example Zouk class',
+                description: 'Teaching a beginner zouk class'
             }
         ]
     },
-
     {
         section: 'Workout',
         collection: [
